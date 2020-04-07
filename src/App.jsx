@@ -32,7 +32,7 @@ class App extends Component{
         const filteredValues  = pokemons.filter( p => regexp.test(p.Name) || p.Types.some( t => regexp.test(t.toLowerCase())));
 
         this.setState({filteredValues: filteredValues.slice(0, 4).sort((a, b) => {
-            if(regexp.text(a.Name) || regexp.test(b.Name)) {
+            if(regexp.test(a.Name) || regexp.test(b.Name)) {
                 if(a.Name < b.Name) {
                     return -1;
                 }
